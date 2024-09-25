@@ -1,0 +1,15 @@
+{
+  "name": "pioneerbrowser",
+  "version": "0.0.1",
+  "description": "A new, fast and modern browser for everyday use",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "TopDutchTech",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}

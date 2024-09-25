@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pioneer Browser</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/resources/js/about.js"></script>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropdown-btn"></button>
+  
+            <!-- dropdown menu, hidden by default -->
+             <div class="dropdown-content">
+              <a href="settings.html">Settings</a>
+              <a href="about.html">About</a>
+             </div>
+          </div>
+        <a href="index.html">Back</a>
+        <a href="#window">Window</a>
+    </header>
+
+    <section class="about">
+        <h1>About Pioneer Browser</h1>
+        <p>debug info</p>
+
+        <p>
+            Version: 0.0.1<br>
+            BuildInfo: 0 <br>
+            Commit: 2
+            
+            <div id="platform-info">     
+            </div>
+            <script>
+                function detectPlatform() {
+    const userAgent = navigator.userAgent;
+    let platform;
+
+    if (userAgent.includes("Win")) {
+        platform = "Windows";
+    } else if (userAgent.includes("Mac")) {
+        platform = "macOS";
+    } else if (userAgent.includes("Linux")) {
+        platform = "Linux";
+    } else if (userAgent.includes("Android")) {
+        platform = "Android";
+    } else if (userAgent.includes("like Mac")) {
+        platform = "iOS";
+    } else {
+        platform = "Unknown Platform";
+    }
+
+    document.getElementById("platform-info").innerText = `Platform: ${platform}`;
+}
+
+// Call the function to detect the platform
+detectPlatform();
+            </script>
+        </p>
+
+        <div class="developer-options">
+            <button onclick="RestartPioneerBrowser()">Restart</button>
+            <button onclick="CreateNewPioneerBrowserWindow()">Create New Window</button>            
+            <button onclick="shutDownPioneerBrowser()">Shut Down</button>
+        </div>
+    </section>
+</body>
+</html>
