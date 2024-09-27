@@ -5,8 +5,34 @@
     <title>Pioneer Browser - Settings</title>
     <link rel="stylesheet" href="styles.css">
     <script src="settings.js"></script>
+    <link rel="stylesheet" href="light.css">
+    <link rel="stylesheet" href="dark.css">
 </head>
 <body>
-    
+    <header>
+        <div class="dropdown">
+            <button class="dropdown-btn"></button>
+  
+            <!-- dropdown menu, hidden by default -->
+             <div class="dropdown-content">
+              <a href="settings.html">Settings</a>
+              <a href="about.html">About</a>
+             </div>
+          </div>
+        <a href="index.html">Back</a>
+        <a href="#window">Window</a>
+    </header>
+
+    <section class="settingbody">
+        <h1>Settings</h1>
+        <p>Settings of Pioneer Browser</p>
+        <br>
+        <div class="dark-light-switch"></div>
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider"></span>
+            </label>
+          </div>
+    </section>
 </body>
 </html>
